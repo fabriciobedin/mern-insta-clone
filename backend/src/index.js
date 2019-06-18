@@ -1,9 +1,12 @@
-const express = require('express');
+const express = require('express')
+const mongoose = require('mongoose')
 
-const app = express();
-
-app.get('/', (req, res) =>{
-  return res.send(`Hello ${req.query.name}`)
+mongoose.connect('mongodb+srv://fabriciobedin:muzc7aFMsdL7LcF@cluster0-rihgs.mongodb.net/test?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
 })
 
-app.listen(3333);
+const app = express()
+
+app.use(require('./routes'))
+
+app.listen(3333)

@@ -1,2 +1,13 @@
+----- backend
 yarn init -i
 yarn add express
+yarn add nodemon -D
+yarn add mongoose
+yarn add multer
+yarn add sharp
+yarn add cors
+yarn add socket.io
+
+----- frontend
+yarn create react-app frontend
+yarn add react-router-dom

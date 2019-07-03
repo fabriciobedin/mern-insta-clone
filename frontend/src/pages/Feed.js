@@ -26,7 +26,7 @@ class Feed extends Component {
             <header>
               <div className="user-info">
                 <span>{post.author}</span>
-                <span className="place">Passo Fundo</span>
+              <span className="place">{post.place}</span>
               </div>
 
               <img src={more} alt="Mais" />

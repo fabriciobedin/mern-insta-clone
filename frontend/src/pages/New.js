@@ -22,7 +22,7 @@ class New extends Component {
     data.append("hashtags", this.state.hashtags);
 
     await api.post("posts", data);
-    
+
     this.props.history.push("/");
   };
 
@@ -33,6 +33,7 @@ class New extends Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  
   render() {
     return (
       <form id="new-post" onSubmit={this.handleSubmit}>

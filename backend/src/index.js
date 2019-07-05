@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const cors = require('cors')
+const port = process.env.PORT || 3333
+
 
 const app = express()
 const server = require('http').Server(app)
@@ -23,4 +25,4 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resiz
 
 app.use(require('./routes'))
 
-server.listen(3333)
+server.listen(port)
